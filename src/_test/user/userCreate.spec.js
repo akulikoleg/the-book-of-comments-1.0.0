@@ -1,14 +1,14 @@
-const { expect } = require("chai");
+const {expect } = require('chai');
 const {userCreateQ} = require("./queries.js");
 const {user } = require("./data.js");
-const gqlRequest = require("../gqlRequest.js");
+const gqlRequest = require("./gqlRequest.js");
 
 let respData = null;
 let postData = null;
 
 describe("User Create", () => {
     describe("User Create - POSITIVE TESTS", () => {
-        it("user create all fields", () => {
+        it("user create all fields", (done) => {
             postData = {
                 query: userCreateQ,
                 variables: user
@@ -23,6 +23,7 @@ describe("User Create", () => {
                     //expect(respData).eq();
                     done();
                 })
+
 
 
 
