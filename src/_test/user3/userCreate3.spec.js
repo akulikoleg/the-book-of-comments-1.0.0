@@ -1,6 +1,7 @@
-const request = require("supertest");
 const {expect } = require('chai');
-const url = "http://localhost:5000/";
+const {user3CreateQ} = require("./queries");
+const {user3} = require("./data");
+const gqlRequest = require("./gqlRequest");
 
 let postData = null;
 let respData = null;
@@ -12,25 +13,12 @@ describe('User creation test', () => {
         it('user Create - positive', (done) => {
 
             postData = {
-                query: `mutation UserCreate($userInput: UserFields) {
-  userCreate(userInput: $userInput) {
-    firstName
-    lastName
-    _id
-  }
-}`,
-                variables: {
-                    userInput: {
-                        firstName: "james",
-                        lastName: "Branson"
-                    }
-                }
+                query: user3CreateQ,
+                variables: user3
             }
 
 
-            request(url)
-                .post('/')
-                .send(postData)
+            gqlRequest(postData)
                 .expect(200)
                 .end((err, res) => {
                     if(err) return done(err);
