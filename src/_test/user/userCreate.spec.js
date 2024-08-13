@@ -1,7 +1,7 @@
 const {expect } = require('chai');
 const {userCreateQ} = require("./queries.js");
 const {user } = require("./data.js");
-const gqlRequest = require("./gqlRequest.js");
+const gqlRequest = require("../gqlRequest.js");
 
 let respData = null;
 let postData = null;
@@ -18,16 +18,18 @@ describe("User Create", () => {
                 .expect(200)
                 .end((err, res) => {
                     if (err) return done(err);
-                    respData = res.body;
-                    console.log(respData);
-                    //expect(respData).eq();
+                    respData = res.body.data.userCreate;
+                    //console.log(respData);
+                    expect(respData.firstName).eq(user.userInput.firstName);
+                    expect(respData.lastName).eq(user.userInput.lastName);
+                    expect(respData).to.be.an('object');
                     done();
                 })
 
-
-
-
         })
+
+
+
     //     it("user create all fields", () => {
     //
     //     })

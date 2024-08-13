@@ -1,7 +1,7 @@
 const {expect } = require('chai');
-const {queryData} = require('../user1/queries');
-const {user1 } = require('../user1/data')
-const gqlRequest = require('../user1/gqlRequest')
+const {queryData} = require('./queries');
+const {user1 } = require('./data')
+const gqlRequest = require('./gqlRequest')
 
 let postData = null;
 let respData = null;
