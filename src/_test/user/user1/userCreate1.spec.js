@@ -12,10 +12,11 @@ let respData = null;
 
 
 describe('User Create ', () => {
+
+    // before("Delete All users",   () => {
     //
-    // before("Delete All users",  (done) => {
-    //     return  User.deleteMany({});
-    //     done();
+    //     return  User.deleteMany();
+    //
     // })
     describe('User create - Positive', () => {
 

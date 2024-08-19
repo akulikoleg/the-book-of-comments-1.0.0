@@ -1,8 +1,8 @@
 const {expect} = require('chai');
-const gqlRequest = require("../gqlRequest");
-const { userGetByIdQ } = require("./queries");
-const {user} = require("./data");
-const {queryData} = require("../user/user1/queries");
+const gqlRequest = require("../../gqlRequest");
+const { userGetByIdQ } = require("../queries");
+const {user1} = require("./data");
+const {queryData} = require("./queries");
 
 
 let postData = null;
@@ -14,7 +14,7 @@ describe("User GetById", () => {
     before("User create", (done) =>{
         postData = {
             query: queryData,
-            variables: user
+            variables: user1
         }
 
         gqlRequest(postData)
