@@ -52,7 +52,13 @@ describe("User Update by ID", ()=> {
                 .end((err, res)=>{
                     if(err) return done(err);
                     respData = res.body;
-                    console.log(respData);
+                    //console.log(respData);
+                    expect(respData.data.userUpdateById._id).to.be.equal(userID);
+                    expect(respData.data.userUpdateById.firstName).to.be.equal("tetatet");
+                    expect(respData.data.userUpdateById.lastName).to.be.equal("testatest");
+
+
+
                     done();
                 })
 
