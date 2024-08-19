@@ -14,4 +14,8 @@ const updateUserByIdQ = `mutation Mutation($userInput: UserFields) {
   }
 }`;
 
-module.exports = { queryData , updateUserByIdQ };
+const userDeleteByIdQ = `mutation UserDeleteById($userId: ID) {
+  userDeleteById(userId: $userId)
+}`;
+
+module.exports = { queryData , updateUserByIdQ, userDeleteByIdQ };

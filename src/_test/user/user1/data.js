@@ -5,5 +5,7 @@ const user1 = {
     }
 }
 
-//const userUpdate =
+// const userDelete = {
+//   userId: null
+// }
 module.exports = { user1 };
