@@ -6,4 +6,12 @@ const queryData = `mutation UserCreate($userInput: UserFields) {
                                 }
                         }`;
 
-module.exports = { queryData };
+const updateUserByIdQ = `mutation Mutation($userInput: UserFields) {
+  userUpdateById(userInput: $userInput) {
+    _id
+    firstName
+    lastName
+  }
+}`;
+
+module.exports = { queryData , updateUserByIdQ };
