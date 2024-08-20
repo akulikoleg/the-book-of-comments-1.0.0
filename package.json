@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "test:user": "mocha src/_test/user/user1/helper.js src/_test/user/user1/**.spec.js",
-    "test": "mocha src/_test/user/user1/helper.js src/_test/user/user1/1_userGetById1.spec.js",
+    "test": "mocha src/_test/user/user1/2_userGetAll.spec.js",
     "start": "nodemon src/index.js"
   },
   "keywords": [],
