@@ -15,7 +15,7 @@ process.env.USER_ID = null;
 
 before("Delete Many",   () => {
 
-        return  User.deleteMany();
+        User.deleteMany({});
         console.log("users are deleted");
 
     })
