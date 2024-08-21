@@ -15,4 +15,12 @@ const userGetByIdQ = `query Query($userId: ID!) {
   }
 }`;
 
-module.exports = { userCreateQ, userGetByIdQ }
+const userGetAllQ = `query Query($amount: Int) {
+  usersGetAll(amount: $amount) {
+    _id
+    firstName
+    lastName
+  }
+}`;
+
+module.exports = { userCreateQ, userGetByIdQ, userGetAllQ }
