@@ -9,19 +9,9 @@ let postData = null;
 let respData = null;
 
 
-
-
 describe('User Create ', () => {
 
-    // before("Delete All users",   () => {
-    //
-    //     return  User.deleteMany();
-    //
-    // })
     describe('User create - Positive', () => {
-
-
-
 
         it('user create all fields - 1', (done) =>{
             postData = {
@@ -37,9 +27,6 @@ describe('User Create ', () => {
                     console.log(respData);
                     done();
                 })
-
-
-
 
         })
 
