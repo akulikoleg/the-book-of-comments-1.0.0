@@ -22,8 +22,10 @@ describe("User Update by ID", ()=> {
                 variables: {
                     userInput: {
                         userId: process.env.USER_ID,
+
                         firstName: "UpdatedFirstName",
                         lastName: "UpdatedLastName",
+
                     }
                 }
             }
@@ -37,7 +39,6 @@ describe("User Update by ID", ()=> {
                     expect(respData.data.userUpdateById._id).to.be.equal(process.env.USER_ID);
                     expect(respData.data.userUpdateById.firstName).to.be.equal("UpdatedFirstName");
                     expect(respData.data.userUpdateById.lastName).to.be.equal("UpdatedLastName");
-
                     done();
                 })
 
