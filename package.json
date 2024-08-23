@@ -4,9 +4,9 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "test:user": "mocha src/_test/user/user1/helper.js src/_test/user/user1/**.spec.js",
+    "test:user1": "mocha src/_test/user/user1/helper.js src/_test/user/user1/**.spec.js",
     "test:user2": "mocha src/_test/user/user2/helper.js src/_test/user/user2/**.spec.js",
-    "test:helper": "mocha src/_test/user/user1/helper.js",
+    "test:user3": "mocha src/_test/user/user3/helper3.js src/_test/user/user3/5_userCreate.spec.js",
 
 
     "start": "nodemon src/index.js"

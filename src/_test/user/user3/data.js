@@ -5,4 +5,11 @@ const user3 = {
     }
 };
 
-module.exports = {user3};
+const emptyUser = {
+    userInput: {
+        firstName: "",
+        lastName: ""
+    }
+};
+
+module.exports = {user3, emptyUser};
