@@ -1,7 +1,7 @@
 const user1 = {
     userInput: {
-        firstName: "Lagrange",
-        lastName: "Stephens"
+        firstName: "testUser1",
+        lastName: "testUserLAst1"
     }
 }
 
