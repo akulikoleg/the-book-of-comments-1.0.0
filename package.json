@@ -6,8 +6,8 @@
   "scripts": {
     "test:user": "mocha src/_test/user/user1/helper.js src/_test/user/user1/**.spec.js",
     "test:user2": "mocha src/_test/user/user2/helper.js src/_test/user/user2/**.spec.js",
-    "test": "mocha src/_test/user/user1/2_userGetAll.spec.js",
-    "test2": "mocha src/_test/user/user2/helper.js",
+    "test:helper": "mocha src/_test/user/user1/helper.js",
+
 
     "start": "nodemon src/index.js"
   },
